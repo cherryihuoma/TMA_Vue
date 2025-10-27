@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  max-width: 1440px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+.navbar nav a {
+  margin: 0 0.8rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar nav .btn {
+  padding: 0.4rem 1rem;
+  background: #0077ff;
+  color: #fff;
+  border-radius: 25px;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem 6rem;
+  background: linear-gradient(to bottom right, #0077ff, #00b4d8);
+  color: white;
+  overflow: hidden;
+}
+
+.hero .circle {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 120px;
+  height: 120px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content .buttons a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn.danger {
+  background: #ff4d4d;
+  color: white;
+}
+.btn.danger:hover {
+  opacity: 0.8;
+}
+
+.hero-content .btn.primary {
+  background: white;
+  color: #0077ff;
+}
+
+.hero-content .btn.secondary {
+  border: 2px solid white;
+  color: #0077ff;
+}
+
+.hero-content .btn:hover {
+  opacity: 0.8;
+}
+
+/* Wave */
+.wave svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Features / Boxes */
+.features {
+  max-width: 1440px;
+  margin: 2rem auto 4rem;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.features h3 {
+  margin-bottom: 2rem;
+  color: #0077ff;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Forms (Login, Signup, Ticket Forms) */
+.feature-box input,
+.feature-box select,
+.feature-box textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.feature-box button {
+  padding: 0.8rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.feature-box button.btn.primary {
+  background: #0077ff;
+  color: white;
+  font-weight: 600;
+}
+
+.feature-box button.btn.secondary {
+  background: #fff;
+  border: 2px solid #0077ff;
+  color: #0077ff;
+}
+
+.feature-box button:hover {
+  opacity: 0.9;
+}
+/* Global button styling */
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #0077ff;
+  color: white;
+}
+
+.btn.secondary {
+  background: white;
+  color: #0077ff;
+  border: 2px solid #0077ff;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+/* Status badges in tickets */
+span {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+span[style*="green"] { background: #d4f8d4; color: green; }
+span[style*="orange"] { background: #ffe4b3; color: orange; }
+span[style*="gray"] { background: #e0e0e0; color: gray; }
+
+/* Footer */
+footer {
+  background: #0077ff;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 4rem;
+}
+
+/* Toast notification (already inline in Vue component) */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar nav a { font-size: 0.9rem; }
+  .hero-content h2 { font-size: 1.6rem; }
+  .hero-content p { font-size: 0.9rem; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-box { padding: 1.5rem; }
+}
